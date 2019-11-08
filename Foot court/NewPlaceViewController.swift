@@ -10,7 +10,7 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
 
-    var newPlace: Place?
+    var newPlace = Place()
     var imageIsChange = false
     
     @IBOutlet weak var safeButton: UIBarButtonItem!
@@ -22,6 +22,12 @@ class NewPlaceViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // сохоанение данных в фоновом потоке
+        DispatchQueue.main.async {
+            self.newPlace.savePlaces()
+        }
+        
         
         tableView.tableFooterView = UIView()
         
@@ -80,11 +86,11 @@ class NewPlaceViewController: UITableViewController {
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
         
-        newPlace = Place(name: placeName.text!,
-                         location: placeLocation.text,
-                         type: placeType.text,
-                         image: image,
-                         restaurantImage: nil)
+//        newPlace = Place(name: placeName.text!,
+//                         location: placeLocation.text,
+//                         type: placeType.text,
+//                         image: image,
+//                         restaurantImage: nil)
         
     }
     
