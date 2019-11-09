@@ -67,6 +67,7 @@
                                     <outlet property="locationLable" destination="9TJ-mR-NKY" id="3ti-JH-TQe"/>
                                     <outlet property="nameLable" destination="zEj-BB-coM" id="cdR-XG-bev"/>
                                     <outlet property="typeLable" destination="fkf-9b-58J" id="wPm-s7-zPT"/>
+                                    <segue destination="jkc-sD-zbv" kind="show" identifier="showDetail" id="wLN-7Q-9Zi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,7 +76,7 @@
                             <outlet property="delegate" destination="eXt-yy-6wF" id="wnu-VX-Z4l"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Foot Court" id="jh1-PA-v6t">
+                    <navigationItem key="navigationItem" title="Foot Court" largeTitleDisplayMode="never" id="jh1-PA-v6t">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4MA-Zh-suw">
                             <connections>
                                 <segue destination="BoG-3o-DMf" kind="presentation" id="xqT-QZ-sJv"/>
@@ -92,7 +93,7 @@
             <objects>
                 <tableViewController id="jkc-sD-zbv" customClass="NewPlaceViewController" customModule="Foot_court" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y8F-Z3-Z1X">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
@@ -235,7 +236,7 @@
                             <outlet property="delegate" destination="jkc-sD-zbv" id="dri-6s-xqG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Place" id="XoK-Ib-ukB">
+                    <navigationItem key="navigationItem" title="New Place" largeTitleDisplayMode="always" id="XoK-Ib-ukB">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bPn-J9-AP6">
                             <connections>
                                 <action selector="cancelAction:" destination="jkc-sD-zbv" id="nba-Bo-zRl"/>
@@ -252,7 +253,7 @@
                         <outlet property="placeLocation" destination="Y0t-oR-faw" id="tXP-ZB-O60"/>
                         <outlet property="placeName" destination="3Vl-xl-71O" id="aK5-OZ-e81"/>
                         <outlet property="placeType" destination="0lE-Yv-3H8" id="y89-1h-V2b"/>
-                        <outlet property="safeButton" destination="lzg-8B-uML" id="KBe-bF-nhm"/>
+                        <outlet property="saveButton" destination="lzg-8B-uML" id="KBe-bF-nhm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whI-r9-Kp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -264,8 +265,8 @@
         <scene sceneID="oqT-sq-NdQ">
             <objects>
                 <navigationController id="gTr-Av-Cjf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DIO-Nl-W7l">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="DIO-Nl-W7l">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="35"/>
@@ -298,10 +299,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNA-QB-TPG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466.6666666666667" y="121.875"/>
+            <point key="canvasLocation" x="1381" y="-228"/>
         </scene>
     </scenes>
     <resources>
         <image name="Photo" width="195" height="196"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wLN-7Q-9Zi"/>
+    </inferredMetricsTieBreakers>
 </document>
