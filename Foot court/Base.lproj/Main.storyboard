@@ -14,9 +14,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="YPw-v0-PcP">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Date"/>
+                                <segment title="Name"/>
+                            </segments>
+                            <connections>
+                                <action selector="sortSelection:" destination="eXt-yy-6wF" eventType="valueChanged" id="Cya-S0-AEt"/>
+                            </connections>
+                        </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Bct-N2-BoO" customClass="CuctomTableViewCell" customModule="Foot_court" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bct-N2-BoO" id="fes-j9-N2V">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
@@ -77,16 +88,25 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Foot Court" largeTitleDisplayMode="never" id="jh1-PA-v6t">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="GOA-Oo-Aqa">
+                            <connections>
+                                <action selector="reversedSorting:" destination="eXt-yy-6wF" id="Kss-Ma-dfy"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4MA-Zh-suw">
                             <connections>
                                 <segue destination="BoG-3o-DMf" kind="presentation" id="xqT-QZ-sJv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="reversedSortingButton" destination="GOA-Oo-Aqa" id="YP1-f8-daL"/>
+                        <outlet property="segmentedcontrol" destination="YPw-v0-PcP" id="W9d-AI-Vsi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MP-PD-Ckn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543.47826086956525" y="121.875"/>
+            <point key="canvasLocation" x="471" y="122"/>
         </scene>
         <!--New Place-->
         <scene sceneID="duK-2a-cDP">
@@ -259,7 +279,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whI-r9-Kp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="tf8-v3-tYc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2247.826086956522" y="121.875"/>
+            <point key="canvasLocation" x="1354" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oqT-sq-NdQ">
@@ -299,10 +319,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNA-QB-TPG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1381" y="-228"/>
+            <point key="canvasLocation" x="1354" y="-574"/>
         </scene>
     </scenes>
     <resources>
+        <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
     </resources>
     <inferredMetricsTieBreakers>

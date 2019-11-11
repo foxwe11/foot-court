@@ -24,8 +24,9 @@ class NewPlaceViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
+        
         saveButton.isEnabled = false
-        setUpNavigationBar()
+        
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
         setUpEditScreen()
