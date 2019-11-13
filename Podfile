@@ -6,5 +6,6 @@ target 'Foot court' do
   use_frameworks!
 
   pod 'RealmSwift'
+  pod 'Cosmos', '~> 20.0'
 
 end

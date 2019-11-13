@@ -41,39 +41,56 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="619-RJ-euI">
-                                            <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                            <rect key="frame" x="96" y="8" width="212" height="69"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEj-BB-coM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="302" height="24.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="212" height="24.5"/>
                                                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TJ-mR-NKY">
-                                                    <rect key="frame" x="0.0" y="27.5" width="302" height="20"/>
+                                                    <rect key="frame" x="0.0" y="27.5" width="212" height="20"/>
                                                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkf-9b-58J">
-                                                    <rect key="frame" x="0.0" y="50.5" width="302" height="18.5"/>
+                                                    <rect key="frame" x="0.0" y="50.5" width="212" height="18.5"/>
                                                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="B9p-xN-llv" customClass="CosmosView" customModule="Cosmos">
+                                            <rect key="frame" x="316" y="35.5" width="90" height="14"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="GlG-Jk-1AU"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                    <real key="value" value="14"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="619-RJ-euI" firstAttribute="leading" secondItem="Ce4-4g-vT5" secondAttribute="trailing" constant="16" id="4fD-ZU-fEY"/>
                                         <constraint firstItem="619-RJ-euI" firstAttribute="top" secondItem="fes-j9-N2V" secondAttribute="top" constant="8" id="9p1-WO-5el"/>
                                         <constraint firstAttribute="bottom" secondItem="619-RJ-euI" secondAttribute="bottom" constant="8" id="KQx-xN-WuW"/>
                                         <constraint firstItem="Ce4-4g-vT5" firstAttribute="centerY" secondItem="fes-j9-N2V" secondAttribute="centerY" id="OOs-mI-dTR"/>
-                                        <constraint firstAttribute="trailing" secondItem="619-RJ-euI" secondAttribute="trailing" constant="16" id="kKQ-G5-izg"/>
+                                        <constraint firstAttribute="trailing" secondItem="B9p-xN-llv" secondAttribute="trailing" constant="8" id="Q3x-US-J9V"/>
+                                        <constraint firstItem="B9p-xN-llv" firstAttribute="centerY" secondItem="fes-j9-N2V" secondAttribute="centerY" id="SEg-Oc-WY0"/>
+                                        <constraint firstItem="B9p-xN-llv" firstAttribute="leading" secondItem="619-RJ-euI" secondAttribute="trailing" constant="8" id="eTD-Y5-Ob4"/>
                                         <constraint firstItem="Ce4-4g-vT5" firstAttribute="leading" secondItem="fes-j9-N2V" secondAttribute="leading" constant="15" id="lux-ff-Eqm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cosmosView" destination="B9p-xN-llv" id="JX0-mC-us1"/>
                                     <outlet property="imageOfPlace" destination="Ce4-4g-vT5" id="GeD-ZQ-Yza"/>
                                     <outlet property="locationLable" destination="9TJ-mR-NKY" id="3ti-JH-TQe"/>
                                     <outlet property="nameLable" destination="zEj-BB-coM" id="cdR-XG-bev"/>
@@ -106,7 +123,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MP-PD-Ckn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="122"/>
+            <point key="canvasLocation" x="469.56521739130437" y="121.875"/>
         </scene>
         <!--New Place-->
         <scene sceneID="duK-2a-cDP">
@@ -290,13 +307,14 @@
                         <outlet property="placeLocation" destination="Y0t-oR-faw" id="tXP-ZB-O60"/>
                         <outlet property="placeName" destination="3Vl-xl-71O" id="aK5-OZ-e81"/>
                         <outlet property="placeType" destination="0lE-Yv-3H8" id="y89-1h-V2b"/>
+                        <outlet property="ratingControl" destination="Vp8-K1-PnM" id="1fh-gX-uH2"/>
                         <outlet property="saveButton" destination="lzg-8B-uML" id="KBe-bF-nhm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whI-r9-Kp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="tf8-v3-tYc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="122"/>
+            <point key="canvasLocation" x="1353.6231884057972" y="121.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oqT-sq-NdQ">
@@ -342,6 +360,8 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="emptyStar" width="255" height="256"/>
+        <image name="filledStar" width="237.5" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wLN-7Q-9Zi"/>
