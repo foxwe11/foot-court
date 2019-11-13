@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8416346E237C62020082C984 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416346D237C62020082C984 /* RatingControl.swift */; };
 		8438DF542375F8A100934B0D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438DF532375F8A100934B0D /* StorageManager.swift */; };
 		84D2E4E02368C80F00DE7723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2E4DF2368C80F00DE7723 /* AppDelegate.swift */; };
 		84D2E4E22368C80F00DE7723 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2E4E12368C80F00DE7723 /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		1B3F0F1FA0C5B04D39AA1FD9 /* Pods_Foot_court.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foot_court.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		735B65B662E652EF0B552C8D /* Pods-Foot court.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foot court.debug.xcconfig"; path = "Target Support Files/Pods-Foot court/Pods-Foot court.debug.xcconfig"; sourceTree = "<group>"; };
+		8416346D237C62020082C984 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		8438DF532375F8A100934B0D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		84D2E4DC2368C80F00DE7723 /* Foot court.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Foot court.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D2E4DF2368C80F00DE7723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				84FCEE1823718BB3002F64DF /* PlaceModel.swift */,
 				8438DF532375F8A100934B0D /* StorageManager.swift */,
 				84FCEE16237094FD002F64DF /* CuctomTableViewCell.swift */,
+				8416346D237C62020082C984 /* RatingControl.swift */,
 				84D2E4E52368C80F00DE7723 /* Main.storyboard */,
 				84D2E4E82368C81100DE7723 /* Assets.xcassets */,
 				84D2E4EA2368C81100DE7723 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 				84FCEE1B2371B87D002F64DF /* NewPlaceViewController.swift in Sources */,
 				84D2E4E02368C80F00DE7723 /* AppDelegate.swift in Sources */,
 				8438DF542375F8A100934B0D /* StorageManager.swift in Sources */,
+				8416346E237C62020082C984 /* RatingControl.swift in Sources */,
 				84FCEE1923718BB3002F64DF /* PlaceModel.swift in Sources */,
 				84FCEE17237094FD002F64DF /* CuctomTableViewCell.swift in Sources */,
 				84D2E4E22368C80F00DE7723 /* SceneDelegate.swift in Sources */,
