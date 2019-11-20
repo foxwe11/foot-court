@@ -77,9 +77,14 @@ class NewPlaceViewController: UITableViewController {
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        guard let indentifier = segue.identifier, let mapVC = segue.destination as? MapViewController else { return }
+        guard
+            let indentifier = segue.identifier,
+            let mapVC = segue.destination as? MapViewController
+            else { return }
         
         mapVC.incomeSegueIndentifier = indentifier
+        mapVC.mapViewControllerDelegate = self
+        
         
         if indentifier == "showPlace" {
             
@@ -196,5 +201,13 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationC
         
         
         
+    }
+}
+ 
+extension NewPlaceViewController: MapViewControllerDelegate {
+    
+    func getAddress(_ address: String?) {
+        
+        placeLocation.text = address 
     }
 }

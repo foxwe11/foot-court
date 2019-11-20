@@ -242,7 +242,7 @@
                                                     </constraints>
                                                     <state key="normal" image="Placeholder"/>
                                                     <connections>
-                                                        <segue destination="3eo-uZ-ZK3" kind="presentation" identifier="getAdress" id="kcM-wt-F42"/>
+                                                        <segue destination="3eo-uZ-ZK3" kind="presentation" identifier="getAddress" id="kcM-wt-F42"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -399,11 +399,23 @@
                                     <action selector="centerViewInUserLocation" destination="3eo-uZ-ZK3" eventType="touchUpInside" id="6ui-Zm-YIu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsg-Ye-sqI">
+                                <rect key="frame" x="182" y="718" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ZhX-n5-GRu"/>
+                                    <constraint firstAttribute="height" constant="50" id="h6g-Xt-8Z9"/>
+                                </constraints>
+                                <state key="normal" image="GetDirection"/>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="3eo-uZ-ZK3" eventType="touchUpInside" id="A5k-w5-49P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="miE-Hk-Ovz" firstAttribute="centerY" secondItem="2WQ-t6-s3m" secondAttribute="centerY" constant="-20" id="2ZM-GU-Xaa"/>
                             <constraint firstItem="joH-2k-LSf" firstAttribute="top" secondItem="2WQ-t6-s3m" secondAttribute="top" id="7G7-of-DME"/>
+                            <constraint firstItem="gsg-Ye-sqI" firstAttribute="centerX" secondItem="2WQ-t6-s3m" secondAttribute="centerX" id="89M-ju-cvR"/>
                             <constraint firstItem="7v7-xX-ozI" firstAttribute="trailing" secondItem="DV8-UM-Yie" secondAttribute="trailing" constant="40" id="8mc-3F-OA9"/>
                             <constraint firstItem="BTf-8X-AIS" firstAttribute="top" secondItem="7v7-xX-ozI" secondAttribute="top" constant="40" id="8nr-i0-6on"/>
                             <constraint firstItem="7v7-xX-ozI" firstAttribute="bottom" secondItem="cNb-49-HfY" secondAttribute="bottom" constant="40" id="Hk8-0f-v6V"/>
@@ -415,14 +427,16 @@
                             <constraint firstItem="7v7-xX-ozI" firstAttribute="trailing" secondItem="BTf-8X-AIS" secondAttribute="trailing" constant="40" id="bRi-G4-knm"/>
                             <constraint firstItem="joH-2k-LSf" firstAttribute="leading" secondItem="7v7-xX-ozI" secondAttribute="leading" id="ez7-XW-l8E"/>
                             <constraint firstItem="miE-Hk-Ovz" firstAttribute="centerX" secondItem="2WQ-t6-s3m" secondAttribute="centerX" id="jw4-N3-YCv"/>
+                            <constraint firstItem="7v7-xX-ozI" firstAttribute="bottom" secondItem="gsg-Ye-sqI" secondAttribute="bottom" constant="40" id="kRv-ix-QyD"/>
                             <constraint firstAttribute="bottom" secondItem="joH-2k-LSf" secondAttribute="bottom" id="lFF-Zl-6Xg"/>
                             <constraint firstItem="p2T-k1-EBh" firstAttribute="leading" secondItem="7v7-xX-ozI" secondAttribute="leading" constant="16" id="mA3-Kh-S9I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7v7-xX-ozI"/>
                     </view>
                     <connections>
-                        <outlet property="adressLable" destination="p2T-k1-EBh" id="6tq-da-gqj"/>
+                        <outlet property="addressLable" destination="p2T-k1-EBh" id="6tq-da-gqj"/>
                         <outlet property="doneButton" destination="cNb-49-HfY" id="St0-vp-V5t"/>
+                        <outlet property="goButton" destination="gsg-Ye-sqI" id="3lc-Us-tek"/>
                         <outlet property="mapPinImage" destination="miE-Hk-Ovz" id="Nab-nf-ptl"/>
                         <outlet property="mapView" destination="joH-2k-LSf" id="RT8-0J-yhG"/>
                     </connections>
@@ -474,6 +488,7 @@
     </scenes>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Location" width="128" height="128"/>
         <image name="Photo" width="195" height="196"/>
         <image name="Pin" width="42" height="42"/>
