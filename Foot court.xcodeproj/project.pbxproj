@@ -422,7 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 59F4BVAUWF;
+				DEVELOPMENT_TEAM = 3TG9F8VMYJ;
 				INFOPLIST_FILE = "Foot court/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,7 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 59F4BVAUWF;
+				DEVELOPMENT_TEAM = 3TG9F8VMYJ;
 				INFOPLIST_FILE = "Foot court/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
